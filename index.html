@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片压缩工具</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 头部区域 -->
+    <header class="header">
+        <h1>图片压缩工具</h1>
+        <p>简洁 · 高效 · 苹果风格</p>
+    </header>
+
+    <!-- 上传区 -->
+    <section class="upload-area">
+        <!-- 上传按钮，支持拖拽和点击 -->
+        <input type="file" id="imageInput" accept="image/png, image/jpeg" multiple>
+        <label for="imageInput" class="upload-label">点击或拖拽图片到此处上传</label>
+    </section>
+
+    <!-- 参数设置区 -->
+    <section class="settings">
+        <label for="qualityRange">压缩比例：</label>
+        <input type="range" id="qualityRange" min="10" max="100" value="80">
+        <span id="qualityValue">80%</span>
+    </section>
+
+    <!-- 预览区 -->
+    <section class="preview-area">
+        <div class="preview-block">
+            <h2>原图预览</h2>
+            <img id="originalImage" src="" alt="原图预览">
+            <p>文件大小：<span id="originalSize">-</span></p>
+        </div>
+        <div class="preview-block">
+            <h2>压缩后预览</h2>
+            <img id="compressedImage" src="" alt="压缩后预览">
+            <p>文件大小：<span id="compressedSize">-</span></p>
+        </div>
+    </section>
+
+    <!-- 下载区 -->
+    <section class="download-area">
+        <button id="downloadBtn" disabled>下载压缩图片</button>
+    </section>
+
+    <!-- 底部区域 -->
+    <footer class="footer">
+        <p>© 2024 图片压缩工具 | 设计风格参考 Apple</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
